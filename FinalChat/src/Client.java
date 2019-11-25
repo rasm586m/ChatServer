@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Client {
 
-    private final static int ServerPort = 5050;
     private final static Scanner scn = new Scanner(System.in);
 
     public static void main(String args[]) throws UnknownHostException, IOException {
@@ -32,7 +31,7 @@ public class Client {
                     break;
                 }
             } catch (IOException e) {
-                System.out.println("IP or PORT or BOTH! is wrong...");
+                System.out.println("IP or PORT is wrong. Try again...");
             }
         }
 
@@ -74,7 +73,7 @@ public class Client {
             public void run() {
                 while (true) {
                     try {
-                        Thread.sleep(10000);
+                        Thread.sleep(60000);
                         finalDos1.writeUTF("IMAV");
                     } catch (InterruptedException | IOException e) {
                         e.printStackTrace();

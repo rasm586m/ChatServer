@@ -35,7 +35,7 @@ public class ClientHandler implements Runnable {
             e.printStackTrace();
         }
         try {
-            s.setSoTimeout(20000);
+            s.setSoTimeout(90000);
         } catch (SocketException e) {
             e.printStackTrace();
         }
