@@ -3,7 +3,7 @@ public class ServerHandler {
     public String createName(String username) {
 
         try {
-            if (!username.matches("^[a-zA-Z0-9\\-_]*$")) {
+            if (!username.matches("^[a-zA-Z0-9]-_*$")) {
                 return "Illegal characters. Username can only have characters, - and _";
             }
             if (username.length() > 12) {
